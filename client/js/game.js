@@ -2,11 +2,11 @@
 define(['infomanager', 'bubble', 'renderer', 'map', 'animation', 'sprite',
         'tile', 'warrior', 'gameclient', 'audio', 'updater', 'transition',
         'pathfinder', 'item', 'mob', 'npc', 'player', 'character', 'chest',
-        'mobs', 'exceptions', 'config', 'guild', '../../shared/js/gametypes'],
+        'mobs', 'exceptions', 'config', 'guild', 'events', '../../shared/js/gametypes'],
 function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedTile,
          Warrior, GameClient, AudioManager, Updater, Transition, Pathfinder,
          Item, Mob, Npc, Player, Character, Chest, Mobs, Exceptions, config,
-         Guild) {
+         Guild, Events) {
     var Game = Class.extend({
         init: function(app) {
             this.app = app;
@@ -14,6 +14,9 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
             this.ready = false;
             this.started = false;
             this.hasNeverStarted = true;
+
+            this.events = new Events();
+
 
             this.renderer = null;
             this.updater = null;
@@ -2645,6 +2648,9 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
 
                 if(achievement.isCompleted() && this.storage.unlockAchievement(achievement.id)) {
                     if(this.unlock_callback) {
+                        // Give the achievement
+                        console.log("Here Should give the achievement:", achievement);
+                        console.log("The hash for the achievement is", this.events.achievements[achievement]);
                         this.unlock_callback(achievement.id, achievement.name, achievement.desc);
                         this.audioManager.playSound("achievement");
                     }

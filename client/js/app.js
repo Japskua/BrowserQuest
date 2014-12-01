@@ -504,6 +504,8 @@ define(['jquery', 'storage'], function($, Storage) {
             this.showAchievementNotification(id, name);
             this.displayUnlockedAchievement(id);
 
+
+
             var nb = parseInt($('#unlocked-achievements').text());
             $('#unlocked-achievements').text(nb + 1);
         },
