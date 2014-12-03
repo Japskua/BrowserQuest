@@ -16,7 +16,6 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
             this.hasNeverStarted = true;
 
             this.events = new Events();
-            console.log(this.events.achievements);
 
 
             this.renderer = null;
@@ -1459,6 +1458,8 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                 });
 
                 self.client.onPlayerKillMob(function(kind, level, exp) {
+
+
                     var mobExp = Types.getMobExp(kind);
                     self.player.level = level;
                     self.player.experience = exp;
@@ -1472,7 +1473,14 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
 
                     self.showNotification( "Total xp: " + self.player.experience + ". " + expPercentThisLevel.toFixed(0) + "% of this level done." );
 
+                    // Get the mob type name
                     var mobName = Types.getKindAsString(kind);
+
+                    // TODO: Notify gamecloud
+                    //console.log("Killed", mobName, "with gamecloud hash of this:", this.events.kills[mobName]);
+                    console.log("Killed", mobName);
+                    console.log("with gamecloud hash of self:", self.events.kills[mobName]);
+
 
                     if(mobName === 'skeleton2') {
                         mobName = 'greater skeleton';
@@ -2651,7 +2659,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                     if(this.unlock_callback) {
                         // Give the achievement
                         console.log("Here Should give the achievement:", achievement);
-                        console.log("The hash for the achievement is", this.events.achievements[achievement]);
+                        console.log("The hash for the achievement is", this.events.achievements[name]);
                         this.unlock_callback(achievement.id, achievement.name, achievement.desc);
                         this.audioManager.playSound("achievement");
                     }

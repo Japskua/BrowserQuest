@@ -32,22 +32,22 @@ define(['events'], function() {
             };
 
             this.kills = {
-                WARRIOR: "",
+                warrior: "",
 
                 // Mobs
-                RAT: "KILL_RAT_HASH",
-                SKELETON: "",
-                GOBLIN: "",
-                OGRE: "",
-                SPECTRE: "",
-                CRAB: "",
-                BAT: "",
-                WIZARD: "",
-                EYE: "",
-                SNAKE: "",
-                SKELETON2: "",
-                BOSS: "",
-                DEATHKNIGHT: ""
+                rat: "KILL_RAT_HASH",
+                skeleton: "",
+                goblin: "",
+                ogre: "",
+                spectre: "",
+                deathknight: "",
+                crab: "",
+                snake: "",
+                bat: "",
+                wizard: "",
+                eye: "",
+                skeleton2: "",
+                boss: ""
             };
 
 
