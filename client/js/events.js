@@ -53,29 +53,29 @@ define(['events'], function() {
 
             this.items = {
                 // ARMORS
-                FIREFOX: "",
-                CLOTHARMOR: "",
-                LEATHERARMOR: "",
-                MAILARMOR: "",
-                PLATEARMOR: "",
-                REDARMOR: "",
-                GOLDENARMOR: "",
+                firefox: "",
+                clotharmor: "",
+                leatherarmor: "",
+                mailarmor: "",
+                platearmor: "",
+                redarmor: "",
+                goldenarmor: "",
 
                 // Weapons
-                SWORD1: "SWORD1-HASH",
-                SWORD2: "SWORD2-HASH",
-                REDSWORD: "",
-                GOLDENSWORD: "",
-                MORNINGSTAR: "",
-                AXE: "",
-                BLUESWORD: "",
+                sword1: "SWORD1-HASH",
+                sword2: "SWORD2-HASH",
+                axe: "",
+                redsword: "",
+                bluesword: "",
+                goldensword: "",
+                morningstar: "",
 
                 // Objects
-                FLASK: "",
-                BURGER: "",
-                CHEST: "",
-                FIREPOTION: "",
-                CAKE: ""
+                flask: "",
+                cake: "",
+                burger: "",
+                chest: "",
+                firepotion: ""
             };
 
             console.log("initialized events properly!");

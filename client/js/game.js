@@ -2799,6 +2799,10 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
             try {
                 this.player.loot(item);
                 this.client.sendLoot(item); // Notify the server that this item has been looted
+
+                // TODO: Notify Gamecloud of the item gained
+                console.log("GAMECLOUD - Gained item", item.itemKind);
+
                 this.removeItem(item);
                 this.showNotification(item.getLootMessage());
 
