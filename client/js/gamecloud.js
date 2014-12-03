@@ -22,7 +22,7 @@ define(['gamecloud'], function() {
             this.initializeSession();
         },
 
-        SERVER_ADDRESS : "",
+        SERVER_ADDRESS : "http://127.0.0.1:8888/api/1/",
 
         /**
          * Initializes the session
@@ -78,6 +78,9 @@ define(['gamecloud'], function() {
                 "sessionId" : this.session
             };
 
+            console.log("--------------------------------------------");
+            console.log("GAMECLOUD - Sending gainItem to server", json);
+            console.log("--------------------------------------------");
 
             $.post(SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
                 if (!data ) return false;
@@ -154,6 +157,10 @@ define(['gamecloud'], function() {
                 "sessionId" : this.session
             };
 
+            console.log("--------------------------------------------");
+            console.log("GAMECLOUD - Sending giveAchievement to server", json);
+            console.log("--------------------------------------------");
+
             $.post(SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
                 if (!data ) return false;
                 else return true;
@@ -203,6 +210,10 @@ define(['gamecloud'], function() {
                 "characterId" : characterId,
                 "sessionId" : this.session
             };
+
+            console.log("--------------------------------------------");
+            console.log("Gamecloud - Sending event triggered to server", json);
+            console.log("--------------------------------------------");
 
             $.post(SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
                 if (!data ) return false;

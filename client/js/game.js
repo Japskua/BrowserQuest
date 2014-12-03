@@ -16,7 +16,10 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
             this.started = false;
             this.hasNeverStarted = true;
 
+            /* Gamecloud specific stuff goes here */
             this.events = new Events();
+            this.gamecloud = new Gamecloud();
+            /* End of gamecloud initialization */
 
 
             this.renderer = null;
@@ -1479,8 +1482,9 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
 
                     // TODO: Notify gamecloud
                     //console.log("Killed", mobName, "with gamecloud hash of this:", this.events.kills[mobName]);
-                    console.log("Killed", mobName);
-                    console.log("with gamecloud hash of self:", self.events.kills[mobName]);
+                    //console.log("Killed", mobName);
+                    //console.log("with gamecloud hash of self:", self.events.kills[mobName]);
+                    this.gamecloud.triggersEvent("NOAUTH", self.events.kills[mobName], "ex:playerX", "ex:characterX");
 
 
                     if(mobName === 'skeleton2') {
@@ -2659,8 +2663,9 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                 if(achievement.isCompleted() && this.storage.unlockAchievement(achievement.id)) {
                     if(this.unlock_callback) {
                         // Give the achievement
-                        console.log("Here Should give the achievement:", achievement);
-                        console.log("The hash for the achievement is", this.events.achievements[name]);
+                        //console.log("Here Should give the achievement:", achievement);
+                        //console.log("The hash for the achievement is", this.events.achievements[name]);
+                        this.gamecloud.giveAchievement("NOAUTH", this.events.achievements[name], "ex:PLAYERx", "ex:characterY");
                         this.unlock_callback(achievement.id, achievement.name, achievement.desc);
                         this.audioManager.playSound("achievement");
                     }
@@ -2802,7 +2807,8 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                 this.client.sendLoot(item); // Notify the server that this item has been looted
 
                 // TODO: Notify Gamecloud of the item gained
-                console.log("GAMECLOUD - Gained item", item.itemKind);
+                //console.log("GAMECLOUD - Gained item", item.itemKind);
+                this.gamecloud.gainItem("NOAUTH", self.events[item.itemKind], "ex:playerX", "ex:CharacterY");
 
                 this.removeItem(item);
                 this.showNotification(item.getLootMessage());
