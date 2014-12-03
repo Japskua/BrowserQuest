@@ -2,7 +2,7 @@
  * Created by Janne on 20.11.2014.
  * Just a stub for holding event information
  */
-define(['Events'], function() {
+define(['events'], function() {
 
     var Events = Class.extend({
         init : function() {

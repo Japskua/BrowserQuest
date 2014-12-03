@@ -16,6 +16,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
             this.hasNeverStarted = true;
 
             this.events = new Events();
+            console.log(this.events.achievements);
 
 
             this.renderer = null;
