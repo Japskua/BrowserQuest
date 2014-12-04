@@ -8,7 +8,7 @@
  * Gamecloud interfacing library for javascript
  * (http request simplifier)
  */
-define(['gamecloud'], function() {
+define([], function() {
 
     var Gamecloud = Class.extend({
 
