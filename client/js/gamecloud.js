@@ -82,7 +82,7 @@ define([], function() {
             console.log("GAMECLOUD - Sending gainItem to server", json);
             console.log("--------------------------------------------");
 
-            $.post(SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
+            $.post(this.SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
                 if (!data ) return false;
                 else return true;
 
@@ -107,7 +107,7 @@ define([], function() {
                 "sessionId" : this.session
             };
 
-            $.post(SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
+            $.post(this.SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
                 if (!data ) return false;
                 else return true;
 
@@ -132,7 +132,7 @@ define([], function() {
                 "sessionId" : this.session
             };
 
-            $.post(SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
+            $.post(this.SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
                 if (!data ) return false;
                 else return data;
 
@@ -161,7 +161,7 @@ define([], function() {
             console.log("GAMECLOUD - Sending giveAchievement to server", json);
             console.log("--------------------------------------------");
 
-            $.post(SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
+            $.post(this.SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
                 if (!data ) return false;
                 else return true;
 
@@ -186,7 +186,7 @@ define([], function() {
                 "sessionId" : this.session
             };
 
-            $.post(SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
+            $.post(this.SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
                 if (!data ) return false;
                 else return data;
 
@@ -215,7 +215,7 @@ define([], function() {
             console.log("Gamecloud - Sending event triggered to server", json);
             console.log("--------------------------------------------");
 
-            $.post(SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
+            $.post(this.SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
                 if (!data ) return false;
                 else return data;
 
@@ -240,7 +240,7 @@ define([], function() {
                 "sessionId" : this.session
             };
 
-            $.post(SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
+            $.post(this.SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
                 if (!data ) return false;
                 else return data;
 

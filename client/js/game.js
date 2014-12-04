@@ -1484,7 +1484,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                     //console.log("Killed", mobName, "with gamecloud hash of this:", this.events.kills[mobName]);
                     //console.log("Killed", mobName);
                     //console.log("with gamecloud hash of self:", self.events.kills[mobName]);
-                    this.gamecloud.triggersEvent("NOAUTH", self.events.kills[mobName], "ex:playerX", "ex:characterX");
+                    self.gamecloud.triggersEvent("NOAUTH", self.events.kills[mobName], "ex:playerX", "ex:characterX");
 
 
                     if(mobName === 'skeleton2') {
@@ -2808,7 +2808,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
 
                 // TODO: Notify Gamecloud of the item gained
                 //console.log("GAMECLOUD - Gained item", item.itemKind);
-                this.gamecloud.gainItem("NOAUTH", self.events[item.itemKind], "ex:playerX", "ex:CharacterY");
+                self.gamecloud.gainItem("NOAUTH", self.events[item.itemKind], "ex:playerX", "ex:CharacterY");
 
                 this.removeItem(item);
                 this.showNotification(item.getLootMessage());
