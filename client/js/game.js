@@ -1486,7 +1486,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                     //console.log("Killed", mobName, "with gamecloud hash of this:", this.events.kills[mobName]);
                     //console.log("Killed", mobName);
                     //console.log("with gamecloud hash of self:", self.events.kills[mobName]);
-                    self.gamecloud.triggersEvent("NOAUTH", self.events.kills[mobName], "ex:playerX");
+                    self.gamecloud.triggersEvent("NOAUTH", self.events.kills[mobName]);
 
 
                     if(mobName === 'skeleton2') {
@@ -2667,7 +2667,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                         // Give the achievement
                         //console.log("Here Should give the achievement:", achievement);
                         //console.log("The hash for the achievement is", this.events.achievements[name]);
-                        this.gamecloud.giveAchievement("NOAUTH", this.events.achievements[name], "ex:PLAYERx");
+                        this.gamecloud.giveAchievement("NOAUTH", this.events.achievements[name]);
                         this.unlock_callback(achievement.id, achievement.name, achievement.desc);
                         this.audioManager.playSound("achievement");
                     }
@@ -2810,7 +2810,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
 
                 // TODO: Notify Gamecloud of the item gained
                 //console.log("GAMECLOUD - Gained item", item.itemKind);
-                self.gamecloud.gainItem("NOAUTH", self.events[item.itemKind], "ex:playerX");
+                self.gamecloud.gainItem("NOAUTH", self.events[item.itemKind]);
 
                 this.removeItem(item);
                 this.showNotification(item.getLootMessage());

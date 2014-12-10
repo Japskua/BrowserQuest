@@ -21,12 +21,18 @@ define([], function() {
             this.session = "";
             this.initializeSession();
 
+            this.playerId = "ex:AnonPlayer_" + moment();
             this.characterId = "ex:AnonChar_" + moment();
         },
 
         setCharacterName : function(charName) {
             this.characterId = "ex:" + charName;
             console.log(":::::GAMECLOUD: Set character name to be:", this.characterId);
+        },
+
+        setPlayerId : function(playerId) {
+            this.playerId = "ex:" + playerId;
+            console.log("::::GAMECLOUD: Set the player Id to be:", this.playerId);
         },
 
         SERVER_ADDRESS : "http://127.0.0.1:8888/api/1/",
@@ -72,14 +78,13 @@ define([], function() {
          * Gives the item to a player
          * @param {string} authkey The authkey of the game
          * @param {string} hash The query hash
-         * @param {string} playerId The player Identification
          */
-        gainItem : function (authkey, hash, playerId) {
+        gainItem : function (authkey, hash) {
 
             json = { "callType" : "gameDataSave",
                 "authkey" : authkey,
                 "hash" : hash,
-                "playerId" : playerId,
+                "playerId" : this.playerId,
                 "characterId" : this.characterId,
                 "sessionId" : this.session
             };
@@ -100,14 +105,13 @@ define([], function() {
          * Lose the item
          * @param {string} authkey
          * @param {string} hash
-         * @param {string} playerId
          */
-        loseItem : function (authkey, hash, playerId) {
+        loseItem : function (authkey, hash) {
 
             json = { "callType" : "gameDataSave",
                 "authkey" : authkey,
                 "hash" : hash,
-                "playerId" : playerId,
+                "playerId" : this.playerId,
                 "characterId" : this.characterId,
                 "sessionId" : this.session
             };
@@ -124,14 +128,13 @@ define([], function() {
          * Used to check if has the item in question
          * @param {string} authkey
          * @param {string} hash
-         * @param {string} playerId
          */
-        hasItem : function (authkey, hash, playerId) {
+        hasItem : function (authkey, hash) {
 
             json = { "callType" : "ask",
                 "authkey" : authkey,
                 "hash" : hash,
-                "playerId" : playerId,
+                "playerId" : this.playerId,
                 "characterId" : this.characterId,
                 "sessionId" : this.session
             };
@@ -148,14 +151,13 @@ define([], function() {
          * Gives the achievement to a player
          * @param {string} authkey
          * @param {string} hash
-         * @param {string} playerId
          */
-        giveAchievement : function (authkey, hash, playerId) {
+        giveAchievement : function (authkey, hash) {
 
             json = { "callType" : "gameDataSave",
                 "authkey" : authkey,
                 "hash" : hash,
-                "playerId" : playerId,
+                "playerId" : this.playerId,
                 "characterId" : this.characterId,
                 "sessionId" : this.session
             };
@@ -176,14 +178,13 @@ define([], function() {
          * Checks if the player has the achievement
          * @param {string} authkey
          * @param {string} hash
-         * @param {string} playerId
          */
-        hasAchievement : function (authkey, hash, playerId) {
+        hasAchievement : function (authkey, hash) {
 
             json = { "callType" : "ask",
                 "authkey" : authkey,
                 "hash" : hash,
-                "playerId" : playerId,
+                "playerId" : this.playerId,
                 "characterId" : this.characterId,
                 "sessionId" : this.session
             };
@@ -200,14 +201,13 @@ define([], function() {
          * Used to trigger events
          * @param {string} authkey
          * @param {string} hash
-         * @param {string} playerId
          */
-        triggersEvent : function (authkey, hash, playerId) {
+        triggersEvent : function (authkey, hash) {
 
             json = { "callType" : "gameDataSave",
                 "authkey" : authkey,
                 "hash" : hash,
-                "playerId" : playerId,
+                "playerId" : this.playerId,
                 "characterId" : this.characterId,
                 "sessionId" : this.session
             };
@@ -228,14 +228,13 @@ define([], function() {
          * Checks if an event has been triggered
          * @param {string} authkey
          * @param {string} hash
-         * @param {string} playerId
          */
-        hasTriggeredEvent : function (authkey, hash, playerId) {
+        hasTriggeredEvent : function (authkey, hash) {
 
             json = { "callType" : "ask",
                 "authkey" : authkey,
                 "hash" : hash,
-                "playerId" : playerId,
+                "playerId" : this.playerId,
                 "characterId" : this.characterId,
                 "sessionId" : this.session
             };
