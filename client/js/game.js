@@ -2810,7 +2810,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
 
                 // TODO: Notify Gamecloud of the item gained
                 //console.log("GAMECLOUD - Gained item", item.itemKind);
-                self.gamecloud.gainItem("NOAUTH", self.events[item.itemKind]);
+                this.gamecloud.gainItem("NOAUTH", this.events.items[item.itemKind]);
 
                 this.removeItem(item);
                 this.showNotification(item.getLootMessage());
