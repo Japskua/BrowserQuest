@@ -35,7 +35,7 @@ define([], function() {
             console.log("::::GAMECLOUD: Set the player Id to be:", this.playerId);
         },
 
-        SERVER_ADDRESS : "http://54.220.223.184:8888/api/1/",
+        SERVER_ADDRESS : "http://52.17.108.193:8888/api/1/",
 
         /**
          * Initializes the session

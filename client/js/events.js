@@ -53,29 +53,29 @@ define(['events'], function() {
 
             this.items = {
                 // ARMORS
-                firefox: "w1drami7f3n89f6r",
-                clotharmor: "9qwii05imgqfr",
-                leatherarmor: "suiyum8pktke29",
-                mailarmor: "m6iqceeh7vhadcxr",
-                platearmor: "zk8cjshw9zcwhfr",
-                redarmor: "oxwm6hlnd0tchaor",
-                goldenarmor: "amhc9502pmd3g14i",
+                firefox: "f0nhr1om276i529",
+                clotharmor: "bapl5pepg9442t9",
+                leatherarmor: "2heii8141eixusor",
+                mailarmor: "x4an2jvsiak5u3di",
+                platearmor: "fwfk6wd7cetp4x6r",
+                redarmor: "zyvnpvvecdutbj4i",
+                goldenarmor: "40t3dxkb1teasjor",
 
                 // Weapons
-                sword1: "p7u3k5gx8ncdi",
-                sword2: "1pqa99gqj9jjdcxr",
-                axe: "bl4dethiwv0u23xr",
-                redsword: "4bwdujlqismunmi",
-                bluesword: "5asefyise7wlv7vi",
-                goldensword: "5iuz8cp41dghw7b9",
-                morningstar: "c2zyujsaad9dlsor",
+                sword1: "4iz4ts8vj72jra4i",
+                sword2: "li533kzh8pdp9zfr",
+                axe: "0o13cvc3rs6h6w29",
+                redsword: "3boee8xc5pi7ldi",
+                bluesword: "ez9zt7l91f2vgqfr",
+                goldensword: "rano5659lfjbrzfr",
+                morningstar: "w4nt6cl0xef80k9",
 
                 // Objects
-                flask: "5wndtj293wyiudi",
-                cake: "x86b1ipua67xpqfr",
-                burger: "rk92dbc7gory66r",
-                chest: "0c67c6zxhuqmpldi",
-                firepotion: "rlbhw8mdm36ry66r"
+                flask: "810obkbig2lw61or",
+                cake: "3dn5nzpfi5f2bj4i",
+                burger: "cwfgev49apogk3xr",
+                chest: "r9meoe1c5gs98uxr",
+                firepotion: "smdussmenrx2bj4i"
             };
 
             console.log("initialized events properly!");
