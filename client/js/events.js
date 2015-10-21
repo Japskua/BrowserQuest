@@ -9,45 +9,45 @@ define(['events'], function() {
             var self = this;
 
             this.achievements = {
-                A_TRUE_WARRIOR : "ykjbfi8b6jq0k9",
-                INTO_THE_WILD : "vrj3bbek44ih33di",
-                ANGRY_RATS : "2ev36cmas28uayvi",
-                SMALL_TALK : "qtf41u60x2ocg14i",
-                FAT_LOOT : "aqz3nhilik9",
-                UNDERGROUND : "7zy029pkfrtwewmi",
-                AT_WORLDS_END : "x6ae5564o2k2o6r",
-                COWARD : "78dabuj467irizfr",
-                TOMB_RAIDER : "yxjep7f7ekygy14i",
-                SKULL_COLLECTOR : "rw0vb2igx1j1yvi",
-                NINJA_LOOT : "sz0k4wmla4soflxr",
-                NO_MANS_LAND : "lnqrmjt5ug6tj4i",
-                HUNTER : "rowatm7ewixusor",
-                STILL_ALIVE : "nb8c3p986n5vzpvi",
-                MEATSHIELD : "72remvoyeyu8fr",
-                HOT_SPOT : "yv2o2sy2205rvn29",
-                HERO : "y5ulbg7r5afqd7vi",
-                FOXY : "0pcv1decennah5mi",
-                FOR_SCIENCE : "4s7qktk0g3hxgvi",
-                RICKROLLD : "qhfj02bca800be29"
+                A_TRUE_WARRIOR : "cioa34cgip7ousor",
+                INTO_THE_WILD : "y7bknfmh1s7l23xr",
+                ANGRY_RATS : "t8cazwhp9sbgldi",
+                SMALL_TALK : "56ofzfgkkr8dunmi",
+                FAT_LOOT : "m1nkuern94e1m7vi",
+                UNDERGROUND : "g2gr3zlximuz0k9",
+                AT_WORLDS_END : "qffplofbgxas8aor",
+                COWARD : "qpnwdl0gsy5vcxr",
+                TOMB_RAIDER : "yc38aw03eg66r",
+                SKULL_COLLECTOR : "fyc79p27bz5v1jor",
+                NINJA_LOOT : "lfismrh71xos9k9",
+                NO_MANS_LAND : "76rf57497rykfbt9",
+                HUNTER : "36rs0xjhfewb3xr",
+                STILL_ALIVE : "5mel5yb7v5jhsemi",
+                MEATSHIELD : "a3mq6f0tzr1i3sor",
+                HOT_SPOT : "ksa9pdr2r9mp9zfr",
+                HERO : "t8u91oz84to11yvi",
+                FOXY : "prrs1z30az41jor",
+                FOR_SCIENCE : "tshcecjm5c73c8fr",
+                RICKROLLD : "1fqsob496nwxw29"
             };
 
             this.kills = {
                 warrior: "",
 
                 // Mobs
-                rat: "nfd4pzeyx9cz0k9",
-                skeleton: "1jsrvajx0ja46lxr",
-                goblin: "1dp65tedvveoecdi",
-                ogre: "k16o1p7io58w7b9",
-                spectre: "4qifarh46makbj4i",
-                deathknight: "oc33ux1lyvxnu3di",
-                crab: "xv2wbxh0vf1xajor",
-                snake: "478cypa7tafywrk9",
-                bat: "9kukcv12iuplow29",
-                wizard: "0rcyqmhncopnl8fr",
-                eye: "p8h3y548xpy9o1or",
-                skeleton2: "n998ts2cv9nklnmi",
-                boss: "ney9b9x2xyfogvi"
+                rat: "mgvvv3yb9mfb6gvi",
+                skeleton: "l152wqypq4cxr",
+                goblin: "wk4gtjry5h4cxr",
+                ogre: "gefo21id92kjra4i",
+                spectre: "ymwt5z9onxnipb9",
+                deathknight: "abyiosncequmcxr",
+                crab: "sdehro66byl7syvi",
+                snake: "g4cs9eb30ig7rpb9",
+                bat: "ayqo4n1ps0pb9",
+                wizard: "rlwti9lkj4oenrk9",
+                eye: "agxo79wrn3ik9",
+                skeleton2: "qhk5ehykv4gc766r",
+                boss: "j1ddqd55hmc2fbt9"
             };
 
 
