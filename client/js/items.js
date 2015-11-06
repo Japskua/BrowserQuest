@@ -80,6 +80,13 @@ define(['item'], function(Item) {
             },
         }),
 
+        BlueArmor : Item.extend({
+            init : function(id) {
+                this._super(id, Types.Entities.BLUEARMOR, "armor");
+                this.lootMessage = "You equip a blue armor";
+            },
+        }),
+
         Flask: Item.extend({
             init: function(id) {
                 this._super(id, Types.Entities.FLASK, "object");

@@ -113,7 +113,10 @@ Types = {
         GOLDENSWORD: 63,
         MORNINGSTAR: 64,
         AXE: 65,
-        BLUESWORD: 66
+        BLUESWORD: 66,
+
+        // Own custom objects (start with number 7xx)
+        BLUEARMOR : 701
     },
 
     Orientations: {
@@ -169,6 +172,7 @@ var kinds = {
     bluesword: [Types.Entities.BLUESWORD, "weapon"],
     goldensword: [Types.Entities.GOLDENSWORD, "weapon"],
     morningstar: [Types.Entities.MORNINGSTAR, "weapon"],
+    // Own weapons
 
     firefox: [Types.Entities.FIREFOX, "armor"],
     clotharmor: [Types.Entities.CLOTHARMOR, "armor"],
@@ -177,6 +181,8 @@ var kinds = {
     platearmor: [Types.Entities.PLATEARMOR, "armor"],
     redarmor: [Types.Entities.REDARMOR, "armor"],
     goldenarmor: [Types.Entities.GOLDENARMOR, "armor"],
+    // Own armors
+    bluearmor : [Types.Entities.BLUEARMOR, "armor"],
 
     flask: [Types.Entities.FLASK, "object"],
     cake: [Types.Entities.CAKE, "object"],
@@ -229,7 +235,8 @@ Types.rankedArmors = [
     Types.Entities.MAILARMOR,
     Types.Entities.PLATEARMOR,
     Types.Entities.REDARMOR,
-    Types.Entities.GOLDENARMOR
+    Types.Entities.GOLDENARMOR,
+    Types.Entities.BLUEARMOR
 ];
 
 Types.expForLevel = [
