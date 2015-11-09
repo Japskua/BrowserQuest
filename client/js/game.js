@@ -1104,6 +1104,13 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                 });
 
                 self.client.onSpawnChest(function(chest, x, y) {
+                    if ( x === 155 && y === 307) {
+                        // TODO: Add here the REAL checker!
+                        var showChest = false;
+                        if ( showChest === false ) {
+                            return;
+                        }
+                    }
                     log.info("Spawned chest (" + chest.id + ") at "+x+", "+y);
                     chest.setSprite(self.sprites[chest.getSpriteName()]);
                     chest.setGridPosition(x, y);
@@ -1955,6 +1962,11 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
         getChestAt: function(x, y) {
             var entity = this.getEntityAt(x, y);
             if(entity && (entity instanceof Chest)) {
+                if (x === 2480 && y === 4912) {
+                    // Set the chest to contain a bluearmor
+                    console.log("!!!!!!! CHEST OPENED AND CHANGED !!!!!!!!!");
+                    entity.items = "bluearmor";
+                }
                 return entity;
             }
             return null;
