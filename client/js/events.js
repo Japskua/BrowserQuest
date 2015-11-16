@@ -58,19 +58,19 @@ define(['events'], function() {
                 warrior: "",
 
                 // Mobs
-                rat: "mgvvv3yb9mfb6gvi",
-                skeleton: "l152wqypq4cxr",
-                goblin: "wk4gtjry5h4cxr",
-                ogre: "gefo21id92kjra4i",
-                spectre: "ymwt5z9onxnipb9",
-                deathknight: "abyiosncequmcxr",
-                crab: "sdehro66byl7syvi",
-                snake: "g4cs9eb30ig7rpb9",
-                bat: "ayqo4n1ps0pb9",
-                wizard: "rlwti9lkj4oenrk9",
-                eye: "agxo79wrn3ik9",
-                skeleton2: "qhk5ehykv4gc766r",
-                boss: "j1ddqd55hmc2fbt9"
+                rat: "9vzvnysf5wdygb9",
+                skeleton: "eu7i1q82r6ls1yvi",
+                goblin: "wo9wpes5k9jxlxr",
+                ogre: "9mklsrh6opy9o1or",
+                spectre: "x4dtq7xirr6647vi",
+                deathknight: "7oizhyn9bjxos9k9",
+                crab: "tsminp3l7796yldi",
+                snake: "omsgkd4x8vvx6r",
+                bat: "orja0b2bkmym0a4i",
+                wizard: "qniqp739biou5wmi",
+                eye: "ddieluqtwop0t3xr",
+                skeleton2: "9wbgdl9zw2v2huxr",
+                boss: "1feby9qc6hzd7vi"
             };
 
 
