@@ -76,29 +76,30 @@ define(['events'], function() {
 
             this.items = {
                 // ARMORS
-                firefox: "f0nhr1om276i529",
-                clotharmor: "bapl5pepg9442t9",
-                leatherarmor: "2heii8141eixusor",
-                mailarmor: "x4an2jvsiak5u3di",
-                platearmor: "fwfk6wd7cetp4x6r",
-                redarmor: "zyvnpvvecdutbj4i",
-                goldenarmor: "40t3dxkb1teasjor",
+                firefox: "x3yyvp7sjqvvx6r",
+                clotharmor: "8fw2cx0bpt4kj4i",
+                leatherarmor: "6qcum3of9kg4aemi",
+                mailarmor: "jiviqa1aci5asjor",
+                platearmor: "1fk8o1s7fup4lsor",
+                redarmor: "oiq0dgp6hynl8fr",
+                goldenarmor: "f3u5ro06dzql4n29",
+                bluearmor : "tzxb0xr0j7zaor",
 
                 // Weapons
-                sword1: "4iz4ts8vj72jra4i",
-                sword2: "li533kzh8pdp9zfr",
-                axe: "0o13cvc3rs6h6w29",
-                redsword: "3boee8xc5pi7ldi",
-                bluesword: "ez9zt7l91f2vgqfr",
-                goldensword: "rano5659lfjbrzfr",
-                morningstar: "w4nt6cl0xef80k9",
+                sword1: "tyf1lnbw2hpycik9",
+                sword2: "gbmwfw1go1sb57b9",
+                axe: "6j7zcap2svnghkt9",
+                redsword: "7kvj4b0v7b7kqpvi",
+                bluesword: "zqozx6blh318m2t9",
+                goldensword: "f0avkil5iiq6ko6r",
+                morningstar: "yer6qm3mvswz5mi",
 
                 // Objects
-                flask: "810obkbig2lw61or",
-                cake: "3dn5nzpfi5f2bj4i",
-                burger: "cwfgev49apogk3xr",
-                chest: "r9meoe1c5gs98uxr",
-                firepotion: "smdussmenrx2bj4i"
+                flask: "bqouvs9h79y0hpvi",
+                cake: "jrk02n0a6bo9lik9",
+                burger: "35cvguhe0hgmbo6r",
+                chest: "dfcc6jmnq564j9k9",
+                firepotion: "tvdzteoyq035wmi"
             };
 
             console.log("initialized events properly!");
