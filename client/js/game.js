@@ -792,9 +792,13 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                 self.player.email = self.email;
                 self.started = true;
 
+                /**
+                 * Create the login to gamecloud here!
+                 */
                 if(action === 'create') {
                     self.client.sendCreate(self.player);
                 } else {
+                    self.gamecloud.login(self.username, self.userpw);
                     self.client.sendLogin(self.player);
                 }
             });
@@ -857,6 +861,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                 } else {
                     self.showNotification("Welcome Back. You are level " + self.player.level + ".");
                     self.storage.setPlayerName(name);
+                    self.gamecloud.initializeSession();
                 }
 
 

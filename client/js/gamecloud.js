@@ -18,11 +18,13 @@ define([], function() {
         init : function() {
             var self = this;
 
+            this.playerId = "ex:AnonPlayer_" + Math.floor((Math.random() * 100000000000000000) + 1).toString();
+            this.characterId = "ex:AnonChar_" +  Math.floor((Math.random() * 100000000000000000) + 1).toString();
+
             this.session = "";
             this.initializeSession();
 
-            this.playerId = "ex:AnonPlayer_" + moment();
-            this.characterId = "ex:AnonChar_" + moment();
+
         },
 
         setCharacterName : function(charName) {
@@ -35,13 +37,45 @@ define([], function() {
             console.log("::::GAMECLOUD: Set the player Id to be:", this.playerId);
         },
 
+        login : function(username, password) {
+            var json = {
+                "callType": "loginUser",
+                "username": username,
+                "password": password
+            };
+
+            this.setPlayerId(username);
+            this.setCharacterName(username);
+
+            $.post(this.SERVER_ADDRESS, JSON.stringify(json), this.authCallback);
+        },
+
+        authCallback : function(data) {
+            if (data !== "No such player in the system") {
+                // Reset the session
+                alert("Login ok");
+            } else {
+                alert(data);
+            }
+        },
+
         SERVER_ADDRESS : "http://52.17.108.193:8888/api/1/",
 
         /**
          * Initializes the session
          */
         initializeSession : function() {
-            this.session = "Session-" + moment() + this.randomString(7);
+            this.session = "Session-" + Math.floor((Math.random() * 100000000000000000) + 1).toString();
+
+            if (this.playerId) {
+                this.session += this.playerId.toString().split("ex:")[1];
+            }
+            if (this.characterId) {
+                this.session += this.characterId.toString().split("ex:")[1];
+            }
+
+            console.log("Session is now:", this.session.toString());
+            //alert("The new session is now:" + this.session.toString());
         },
 
         /**
