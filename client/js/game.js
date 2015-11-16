@@ -3,11 +3,11 @@ define(['infomanager', 'bubble', 'renderer', 'map', 'animation', 'sprite',
         'tile', 'warrior', 'gameclient', 'audio', 'updater', 'transition',
         'pathfinder', 'item', 'mob', 'npc', 'player', 'character', 'chest',
         'mobs', 'exceptions', 'config', 'guild', 'events',
-        'gamecloud', '../../shared/js/gametypes'],
+        'gamecloud', 'static_data', '../../shared/js/gametypes'],
 function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedTile,
          Warrior, GameClient, AudioManager, Updater, Transition, Pathfinder,
          Item, Mob, Npc, Player, Character, Chest, Mobs, Exceptions, config,
-         Guild, Events, Gamecloud) {
+         Guild, Events, Gamecloud, StaticData) {
     var Game = Class.extend({
         init: function(app) {
             this.app = app;
@@ -1105,7 +1105,18 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
 
                 self.client.onSpawnItem(function(item, x, y) {
                     log.info("Spawned " + Types.getKindAsString(item.kind) + " (" + item.id + ") at "+x+", "+y);
-                    self.addItem(item, x, y);
+                    if (Types.getKindAsString(item.kind) === "bluearmor") {
+                        //alert("Trying to spawn bluearmor. We currently have arcade achievements:" + StaticData.arcadeAchievementsCount);
+                        // Check if we have the prerequisites
+                        if (StaticData.arcadeAchievementsCount >= 5) {
+                            // If we have 5 or more arcade achievements, create the bluearmor
+                            self.addItem(item, x, y);
+                            //alert("Added the blue armor");
+                        }
+                    } else {
+                        // Otherwise, always spawn the item
+                        self.addItem(item, x, y);
+                    }
                 });
 
                 self.client.onSpawnChest(function(chest, x, y) {
@@ -1494,10 +1505,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                     // Get the mob type name
                     var mobName = Types.getKindAsString(kind);
 
-                    // TODO: Notify gamecloud
                     //console.log("Killed", mobName, "with gamecloud hash of this:", this.events.kills[mobName]);
-                    //console.log("Killed", mobName);
-                    //console.log("with gamecloud hash of self:", self.events.kills[mobName]);
                     self.gamecloud.triggersEvent("NOAUTH", self.events.kills[mobName]);
 
 
@@ -2825,7 +2833,6 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                 this.player.loot(item);
                 this.client.sendLoot(item); // Notify the server that this item has been looted
 
-                // TODO: Notify Gamecloud of the item gained
                 //console.log("GAMECLOUD - Gained item", item.itemKind);
                 this.gamecloud.gainItem("NOAUTH", this.events.items[item.itemKind]);
 

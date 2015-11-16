@@ -8,7 +8,7 @@
  * Gamecloud interfacing library for javascript
  * (http request simplifier)
  */
-define([], function() {
+define(['static_data'], function(StaticData) {
 
     var Gamecloud = Class.extend({
 
@@ -102,6 +102,7 @@ define([], function() {
                 } else {
                     // We have data
                     this.countArcadeAchievements = parseInt(data);
+                    StaticData.arcadeAchievementsCount = parseInt(data);
                     alert("Count is: " + this.countArcadeAchievements);
                 }
             });
