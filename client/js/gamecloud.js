@@ -12,6 +12,13 @@ define([], function() {
 
     var Gamecloud = Class.extend({
 
+        askCountArcadeAchievements : "asiogngioasg9asg90n",
+        countArcadeAchievements : 0,
+
+        getCountOfArcadeAchievements : function() {
+            return this.countArcadeAchievements;
+        },
+
         /**
          * Constructor/Initializer for the gamecloud
          */
@@ -76,6 +83,28 @@ define([], function() {
 
             console.log("Session is now:", this.session.toString());
             //alert("The new session is now:" + this.session.toString());
+            this.checkForArcadeAchievementsCount();
+        },
+
+        /**
+         * Checks for the count of arcade achievements
+         */
+        checkForArcadeAchievementsCount : function() {
+            json = { "callType" : "ask",
+                "authkey" : "NOAUTH",
+                "hash" : this.askCountArcadeAchievements,
+                "playerId" : this.playerId
+            };
+
+            $.post(this.SERVER_ADDRESS, JSON.stringify(json), function(data, textStatus, jqXHR){
+                if(!data) {
+                    alert("No data received!");
+                } else {
+                    // We have data
+                    this.countArcadeAchievements = parseInt(data);
+                    alert("Count is: " + this.countArcadeAchievements);
+                }
+            });
         },
 
         /**
