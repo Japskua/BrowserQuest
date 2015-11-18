@@ -8,6 +8,13 @@ define(['events'], function() {
         init : function() {
             var self = this;
 
+            this.events = {
+                Player_Clicked_Asteroids_Link : {
+                    give : "ynh30rmql8k0rudi",
+                    ask : "m7su02y27fkwqaor"
+                }
+            },
+
             this.achievements = {
                 A_TRUE_WARRIOR : "2nv664yi6ixjemi",
                 INTO_THE_WILD : "sns7i3bz66979zfr",

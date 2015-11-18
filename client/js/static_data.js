@@ -4,7 +4,9 @@
 "use strict";
 define([], function() {
     var StaticData = {
-        arcadeAchievementsCount : 0
+        arcadeAchievementsCount : 0,
+        gamecloudObject : null,
+        events : null
     };
 
     return StaticData;

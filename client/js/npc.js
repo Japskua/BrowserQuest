@@ -1,4 +1,4 @@
-define(['character'], function(Character) {
+define(['character', 'static_data'], function(Character, StaticData) {
 
     var NpcTalk = {
         "guard": [
@@ -45,7 +45,8 @@ define(['character'], function(Character) {
             "Do not try to bend the sword",
             "That's impossible",
             "Instead, only try to realize the truth...",
-            "There is no sword."
+            "There is no sword.",
+            'Check out the special game at <a target="_blank" href="http://www.google.fi" onclick="return clickGamecloud()">Gamecloud Games</a>! There might be something special included?'
         ],
 
         "rick": [

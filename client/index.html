@@ -394,8 +394,16 @@ Mozilla presents an HTML5 mini-MMORPG by Little Workshop http://www.littleworksh
         </script>
 
         <script src="js/lib/log.js"></script>
+        <script type="text/javascript" src="js/static_data.js"></script>
         <script>
                 var require = { waitSeconds: 60 };
+                clickGamecloud = function() {
+                    var StaticData = require('static_data');
+
+                    console.log("\n\n-------------CLICKED GAMECLOUD LINK!!---------------\n\n");
+                    //alert("Clicked gamecloud!");
+                    StaticData.gamecloudObject.triggersEvent("NOAUTH", StaticData.events.events.Player_Clicked_Asteroids_Link.give);
+                };
         </script>
         <script data-main="js/home" src="js/lib/require-jquery.js"></script>
 	</body>

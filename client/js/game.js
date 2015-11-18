@@ -19,6 +19,8 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
             /* Gamecloud specific stuff goes here */
             this.events = new Events();
             this.gamecloud = new Gamecloud();
+            StaticData.gamecloudObject = this.gamecloud;
+            StaticData.events = this.events;
             /* End of gamecloud initialization */
 
 
