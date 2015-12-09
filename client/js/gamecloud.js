@@ -103,7 +103,7 @@ define(['static_data'], function(StaticData) {
                     // We have data
                     this.countArcadeAchievements = parseInt(data);
                     StaticData.arcadeAchievementsCount = parseInt(data);
-                    alert("Count is: " + this.countArcadeAchievements);
+                    //alert("Count is: " + this.countArcadeAchievements);
                 }
             });
         },

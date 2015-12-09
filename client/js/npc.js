@@ -46,7 +46,7 @@ define(['character', 'static_data'], function(Character, StaticData) {
             "That's impossible",
             "Instead, only try to realize the truth...",
             "There is no sword.",
-            'Check out the special game at <a target="_blank" href="http://www.google.fi" onclick="return clickGamecloud()">Gamecloud Games</a>! There might be something special included?'
+            'Check out the special game at <a target="_blank" href="http://www.gamecloudgames.com/" onclick="return clickGamecloud()">Gamecloud Games</a>! There might be something special included?'
         ],
 
         "rick": [
